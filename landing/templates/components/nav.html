@@ -1,5 +1,9 @@
 {% load static %}
+{% if request.get_full_path == '/' or request.get_full_path == "/about/" %}
+<header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 120, 'stickyHeaderContainerHeight': 70}">
+{% else %}
 <header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 120, 'stickyHeaderContainerHeight': 70}">
+{% endif %}
   <div class="header-body border-top-0">
     
     <div class="header-container container">
@@ -53,7 +57,10 @@
             </div>
             <div class="header-nav-features header-nav-features-no-border header-nav-features-lg-show-border order-1 order-lg-2">
               <div class="header-nav-feature header-nav-features-search d-inline-flex">
-                <a href="#" class="header-nav-features-toggle pl-1"><i class="fab fa-linkedin-in header-nav-top-icon"></i></a>
+                <a href="https://www.linkedin.com/in/jessica-ocquaye-mcipd-13b03384/?originalSubdomain=uk" target="_blank" class="header-nav-features-toggle pl-1"><i class="fab fa-linkedin-in header-nav-top-icon"></i></a>
+              </div>
+              <div class="header-nav-feature header-nav-features-search d-inline-flex">
+                <a href="mailto:info@jfmconsult.co.uk" class="header-nav-features-toggle pl-2"><i class="far fa-envelope header-nav-top-icon"></i></a>
               </div>
             </div>
           </div>

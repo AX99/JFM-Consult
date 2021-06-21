@@ -66,11 +66,12 @@
 			{% include 'components/nav.html' %}
 
 			<div role="main" class="main bg-color-grey-scale-1">
-			{% block content %}
-
-        
-        	{% endblock %}
-				
+				<div class="h-100 border-bottom">
+					
+					{% block content %}
+					{% endblock %}
+					
+				</div>
 
 				<div class="container">
 					<div class="row py-5">

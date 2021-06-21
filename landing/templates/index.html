@@ -2,9 +2,11 @@
 {% load static %}
 {% block title %} Home {% endblock %} 
 {% block content %}
+
+
 {% include 'components/slider.html' %}
 
-<div class="container my-5 py-3" id="main">
+{% comment %} <div class="container my-5 py-3" id="main">
     <div class="row pt-4">
         <div class="col-lg-4 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
             <div class="feature-box feature-box-style-2">
@@ -112,7 +114,57 @@
             </div>
         </div>
     </div>
+</div> {% endcomment %}
+
+<div class="container py-5 my-5" id="main">
+    <div class="row justify-content-center text-center mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
+        <div class="col-lg-8">
+            <h2 class="font-weight-bold mb-3 mt-3">We Can Help You</h2>
+            <p class="text-6 text-color-dark line-height-7 negative-ls-1 px-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit phasellus blandit massa enim.</p>
+            <p class="opacity-9 text-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamos bibendum magna ex.</p>
+        </div>
+    </div>
+    <div class="row featured-boxes featured-boxes-style-4">
+        <div class="col-md-6 col-lg-3">
+            <div class="featured-box featured-box-primary featured-box-effect-4 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
+                <div class="box-content px-4">
+                    <i class="icon-featured icon-screen-tablet icons text-12"></i>
+                    <h4 class="font-weight-bold text-color-dark pb-1 mb-2">Mobile Apps</h4>
+                    <p class="mb-0">Lorem ipsum dolor sit amet, coctetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="featured-box featured-box-primary featured-box-effect-4 appear-animation" data-appear-animation="fadeIn">
+                <div class="box-content px-4">
+                    <i class="icon-featured icon-layers icons text-12"></i>
+                    <h4 class="font-weight-bold text-color-dark pb-1 mb-2">Creative Websites</h4>
+                    <p class="mb-0">Lorem ipsum dolor sit amet, coctetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="featured-box featured-box-primary featured-box-effect-4 appear-animation" data-appear-animation="fadeIn">
+                <div class="box-content px-4">
+                    <i class="icon-featured icon-magnifier icons text-12"></i>
+                    <h4 class="font-weight-bold text-color-dark pb-1 mb-2">SEO Optimization</h4>
+                    <p class="mb-0">Lorem ipsum dolor sit amet, coctetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="featured-box featured-box-primary featured-box-effect-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="200">
+                <div class="box-content px-4">
+                    <i class="icon-featured icon-screen-desktop icons text-12"></i>
+                    <h4 class="font-weight-bold text-color-dark pb-1 mb-2">Brand Solutions</h4>
+                    <p class="mb-0">Lorem ipsum dolor sit amet, coctetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 <section class="section section-secondary border-0 py-0 m-0 z-index-master position-relative appear-animation" data-appear-animation="fadeIn">
     <div class="container">
         <div class="row align-items-center justify-content-center justify-content-lg-between pb-5 pb-lg-0">
@@ -120,7 +172,7 @@
                 <h2 class="font-weight-bold text-color-light text-7 mb-2">Who We Are</h2>
                 <p class="lead font-weight-light text-color-light text-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit massa enim. Nullam id varius nunc.</p>
                 <p class="font-weight-light text-color-light text-2 mb-4 opacity-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendun magna ex, et faucibus lacus venenatis eget</p>
-                <a href="#" class="btn btn-dark-scale-2 btn-px-5 btn-py-2 text-2">LEARN MORE</a>
+                <a href="/about/" class="btn btn-dark-scale-2 btn-px-5 btn-py-2 text-2">LEARN MORE</a>
             </div>
             <div class="col-9 offset-lg-1 col-lg-5 order-1 order-lg-2 scale-2">
                 <img class="img-fluid box-shadow-3 my-2 border-radius" src="{% static "img/gallery/gallery-1.jpg"%}" alt="">
@@ -129,7 +181,65 @@
     </div>
 </section>
 
-<section class="section section-height-3 bg-color-grey-scale-1 border-0 m-5 appear-animation" data-appear-animation="fadeIn">
+
+<div class="container mt-5 py-5 border-bottom">
+    <h2 class="font-weight-bold mb-3 mt-3 text-center"> The Coaching Process</h2>
+    <div class="row pt-4">
+        <div class="col-lg-8 pb-2">
+
+            <div class="process process-vertical pt-4">
+                <div class="process-step appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
+                    <div class="process-step-circle">
+                        <strong class="process-step-circle-content">1</strong>
+                    </div>
+                    <div class="process-step-content">
+                        <h4 class="mb-1 text-4 font-weight-bold">Getting Started</h4>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendum ma Nullam id varius nunc. </p>
+                    </div>
+                </div>
+                <div class="process-step appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
+                    <div class="process-step-circle">
+                        <strong class="process-step-circle-content">2</strong>
+                    </div>
+                    <div class="process-step-content">
+                        <h4 class="mb-1 text-4 font-weight-bold">Learn About Us</h4>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit masbendum ma Nullam id varius nunc. Vivamus bibendum magna ex, et faucibus lacus venenatis eget</p>
+                    </div>
+                </div>
+                <div class="process-step appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">
+                    <div class="process-step-circle">
+                        <strong class="process-step-circle-content">3</strong>
+                    </div>
+                    <div class="process-step-content">
+                        <h4 class="mb-1 text-4 font-weight-bold">View Our Projects</h4>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bib</p>
+                    </div>
+                </div>
+                <div class="process-step pb-4 mb-2 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">
+                    <div class="process-step-circle">
+                        <strong class="process-step-circle-content">4</strong>
+                    </div>
+                    <div class="process-step-content">
+                        <h4 class="mb-1 text-4 font-weight-bold">Contact Us</h4>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-4 px-5 pt-2 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
+            <div class="testimonial testimonial-style-7 testimonial-primary py-5 mt-4">
+                <blockquote>
+                    <p class="text-6 line-height-9 mb-0 mt-4">Your time is limited, so don’t waste it living someone else’s life.</p>
+                </blockquote>
+                <a class="btn btn-outline btn-light text-light font-weight-bold mb-3" href="/coaching/">LEARN MORE</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="section bg-color-grey-scale-1 border-0 appear-animation" data-appear-animation="fadeIn">
     <div class="container">
         <div class="row">
             <div class="col appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
@@ -168,7 +278,7 @@
     </div>
 </section>
 
-<div class="container-fluid">
+{% comment %} <div class="container-fluid">
     <div class="row">
         <div class="col-lg-6 p-0">
             <section class="section section-height-3 section-primary h-100 m-0 border-0">
@@ -252,7 +362,7 @@
         </div>
 
     </div>
-</div>
+</div> {% endcomment %}
 
 
 

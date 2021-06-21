@@ -3,8 +3,50 @@
 {% block title %} Blog {% endblock %} 
 {% block content %}
 
+<div role="main" class="main">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col text-center">
+                <div class="logo">
+                    <a href="/">
+                        <img width="100" height="48" src="{% static "img/logo-corporate-4.png" %}" alt="Home">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr class="solid my-5">
+            </div>
+        </div>
+        <div class="row pb-4">
+            <div class="col text-center">
+                <h2 class="font-weight-normal text-7 mb-2"><strong class="font-weight-extra-bold">Blog Coming Soon</strong></h2>
+                <p class="mb-0 lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                <br>
+                <p class="mb-1">Enter your email below to sign up to our newsletter and be notified when our blog is live! </p>
+            </div>
+        </div>
+        <div class="row justify-content-center pt-2 pb-4">
+            <div class="col-lg-6">
+                <div class="alert alert-success d-none" id="newsletterSuccess">
+                    <strong>Success!</strong> You've been added to our email list.
+                </div>
 
+                <div class="alert alert-danger d-none" id="newsletterError"></div>
 
+                <form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST">
+                    <div class="input-group">
+                        <input class="form-control" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
+                        <span class="input-group-append">
+                            <button class="btn btn-light text-1 text-uppercase" type="submit">Subscribe Now</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 {% endblock %}
