@@ -53,8 +53,9 @@
 		<script src=" {% static "vendor/modernizr/modernizr.min.js" %}"></script>
 
 	</head>
-	<body class="loading-overlay-showing bg-color-greyscale-1" data-plugin-page-transition data-loading-overlay data-plugin-options="{'hideDelay': 500}">
-		<div class="loading-overlay">
+	<body class="loading-overlay-showing bg-color-secondary" data-plugin-page-transition data-loading-overlay data-plugin-options="{'hideDelay': 500}">
+		<div class="loading-overlay bg-secondary">
+			<div class="logo-load"><img src="{% static "img/logo-icon.png"%}" width=80></div>
 			<div class="bounce-loader">
 				<div class="bounce1"></div>
 				<div class="bounce2"></div>
@@ -62,11 +63,11 @@
 			</div>
 		</div>
 
-		<div class="body bg-color-grey-scale-1">
+		<div class="body bg-color-secondary">
 			{% include 'components/nav.html' %}
 
-			<div role="main" class="main bg-color-grey-scale-1">
-				<div class="h-100 border-bottom">
+			<div role="main" class="main bg-color-secondary">
+				<div class="h-100">
 					
 					{% block content %}
 					{% endblock %}
