@@ -68,3 +68,11 @@ html .btn-primary:hover, html .btn-primary.hover {
 .about-section:hover p {
     color: #b39d21;
 }
+
+/* .form-control {
+    background-color: #bfbfbf;
+} */
+
+.form-control input::placeholder {
+    color: #101324;
+  }
