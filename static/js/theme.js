@@ -4546,7 +4546,7 @@ window.theme.fn = {
 
 				// Top Features
 				$header.find('.header-nav-features-toggle').on('click', function(e) {
-					e.preventDefault();
+					// e.preventDefault();
 
 					var $toggleParent = $(this).parent();
 

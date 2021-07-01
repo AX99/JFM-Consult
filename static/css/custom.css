@@ -72,7 +72,36 @@ html .btn-primary:hover, html .btn-primary.hover {
 /* .form-control {
     background-color: #bfbfbf;
 } */
-
+/* sort below */
 .form-control input::placeholder {
     color: #101324;
   }
+
+.nav-tabs .nav-item:hover p {
+    color: #4f6db3
+}
+
+/* Coaching page section  - change commented out styles to correct colours */
+html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(1) {
+	background-color: #1d3366;
+}
+
+html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(2) {
+	background-color: #334c87;
+}
+
+html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(3) {
+	background-color: #4F6DB3;
+}
+
+/* html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(4) {
+	background-color: #c99825;
+}
+
+html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(5) {
+	background-color: #d9a62e;
+}
+
+html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(6) {
+	background-color: #ddb044; */
+}
