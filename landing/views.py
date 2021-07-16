@@ -1,23 +1,73 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+# from django.http import HttpResponse
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
+from django.views.generic import FormView, TemplateView
+from .forms import ContactForm
+
+class IndexView(TemplateView):
+    template_name = 'index.html'
 
 
-def index(request):
-    context= {}
-    return render(request, 'index.html', context=context)
+class AboutView(TemplateView):
+    template_name = 'about.html'
 
-def about(request):
-    context={}
-    return render(request, 'about.html', context=context)
 
-def coaching(request):
-    context = {}
-    return render(request,'coaching.html',context=context)
+class  CoachingView(TemplateView):
+    template_name = 'coaching.html'
     
-def blog(request):
-    context = {}
-    return render(request,'blog.html',context=context)
+
+class BlogView(TemplateView):
+    template_name = 'blog.html'
+
+
+# class ContactFormView(SuccessMessageMixin, FormView):
+#     template_name = 'contact.html'
+#     form_class = ContactForm
+#     name = 'contact'
+#     success_message = 'Your Message has been sent, you should receive a reply shortly. Thanks!'
+
+#     def get(self,request, *args, **kwargs):
+#         form = self.form_class()
+#         return render(request, self.template_name, {'form' : form})
+
+#     def post(self, request, *args, **kwargs):
+#         form = self.form_class(request.POST)
+#         if form.is_valid():
+#             messages.success(request, 'Form submission successful')
+
+#         return render(request, self.template_name, {'form': form})
+
+#     def form_valid(self,form):
+#         message = "{name} / {email} said: ".format(
+#         first_name=form.cleaned_data.get('first_name'),
+#         last_name=form.cleaned_data.get('last_name'),
+#         email=form.cleaned_data.get('email'))
+#         message += "\n\n{0}".format(form.cleaned_data.get('message'))
+#         send_mail(
+#             subject=form.cleaned_data.get('subject').strip(),
+#             message=message,
+#             from_email='contact-form@myapp.com',
+#             recipient_list=[settings.LIST_OF_EMAIL_RECIPIENTS],
+#         )
+#         return super(ContactFormView, self).form_valid(form)  
+
 
 def contact(request):
-    context = {}
-    return render(request,'contact.html',context=context)
+    form = ContactForm()
+    
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            print("Post form is valid")
+            messages.success(request, 'Form submission successful') 
+            context = {'form': form}
+            return render(request, 'contact.html', context)
+        else:
+            print('Post form is INVALID')
+            messages.error(request, 'Form submission unsuccesful, try again')
+            context = {'form': form}
+            return render(request, 'contact.html', context)
+    else:
+        context = {'form': form}
+        return render(request, 'contact.html', context)
