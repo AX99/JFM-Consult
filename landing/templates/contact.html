@@ -79,7 +79,7 @@
 
 
             <div class="col-lg-6">
-                <form id="contactForm" class="contact-form" action="{% url 'contact' %}" method="POST" >
+                <form id="contactForm" class="contact-form" action="{% url 'contact' %}" method="POST" novalidate=novalidate>
                     {% csrf_token %}
 
                     {% for hidden in form.hidden_fields %}
@@ -95,8 +95,9 @@
                         <span class="mail-error-message text-1 d-block" id="mailErrorMessage"></span>
                     </div> -->
 
-                    {% if messages %}
+                    
                     <ul class="messages">
+                        {% if messages %}
                         {% for message in messages %}
                         <li  {% if message.tags == 'error' %} 
                         class=" alert alert-danger"
@@ -106,35 +107,36 @@
                             {{ message }} 
                         </li>
                         {% endfor %}
+                        {% endif %}
                     </ul>
-                    {% endif %}
+                    
                     
                     
                     <div class="form-row">
                        {% for field in form.visible_fields|slice:"0:2" %}
                         <div class="form-group col">
-                            {{field.errors}}
                             <label class="required font-weight-bold text-tertiary text-2">{{ field.label}}</label>
                             <input type="text" value="" data-msg-required="Please enter your {{ field.label }}." class="bg-color-grey-scale-10 form-control" name="{{field.name}}" id="{{ field.name }}">
                         </div>
+                        {{field.errors}}
                         {% endfor %}
                     </div>
                     <div class="form-row">
                         {% for field in form.visible_fields|slice:"2:4" %}
                         <div class="form-group col-lg-6">
-                            {{field.errors}}
                             <label class="required font-weight-bold text-tertiary text-2">{{ field.label }}</label>
                             <input type="{{ field.name }}" data-msg-required="Please enter your {{field.label}}." data-msg-email="Please enter a valid {{field.label}}." class="bg-color-grey-scale-10 form-control" name="{{ field.name }}" id="{{ field.name }}">
                         </div>
+                        {{field.errors}}
                         {% endfor %}
                     </div>
                     <div class="form-row">
                         {% for field in form.visible_fields|slice:"4:" %}
                         <div class="form-group col">
-                            {{field.errors}}
                             <label class="required font-weight-bold text-tertiary text-2">{{ field.label }}</label>
                             <textarea data-msg-required="Please enter your {{ field.label }}." rows="5" class="bg-color-grey-scale-10 form-control" name="{{ field.name }}" id="{{ field.name }}"></textarea>
                         </div>
+                        {{field.errors}}
                         {% endfor %}
                     </div>
                     <div class="form-row">

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-# from django.http import HttpResponse
+from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import FormView, TemplateView
@@ -58,15 +58,24 @@ def contact(request):
     
     if request.method == 'POST':
         form = ContactForm(request.POST)
+
+        # first_name = request.POST['first_name']
+        # last_name = request.POST['last_name']
+        # email = request.POST['email']
+        # phone = request.POST['phone']
+        # message = request.POST['message']
+
         if form.is_valid():
             print("Post form is valid")
-            messages.success(request, 'Form submission successful') 
-            context = {'form': form}
+            success = messages.success(request, 'Form submission successful') 
+            context = {'form': form, 'success': 'success'}
+            # return HttpResponse(success)
             return render(request, 'contact.html', context)
         else:
             print('Post form is INVALID')
-            messages.error(request, 'Form submission unsuccesful, try again')
-            context = {'form': form}
+            success = messages.error(request, 'Form submission unsuccesful, try again')
+            context = {'form': form, 'success':success}
+            # return HttpResponse(success)
             return render(request, 'contact.html', context)
     else:
         context = {'form': form}
