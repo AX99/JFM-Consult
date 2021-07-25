@@ -2,12 +2,12 @@
 
 /* Footericons */
 .social-icons li:hover {
-    background: #B38821;
+    background: #571D31;
 	color: #FFF !important;
 }
 
 #footer a:not(.btn):hover {
-    color: #B38821;
+    color: #571D31;
 
 }
 
@@ -25,7 +25,7 @@
 .bounce-loader .bounce1,
 .bounce-loader .bounce2,
 .bounce-loader .bounce3 {
-	background-color: #B38821;
+	background-color: #571D31;
 	border: 1px solid rgba(0, 0, 0, 0.327);
 }
 
@@ -53,12 +53,12 @@ html .btn-outline.btn-tertiary:hover, html .btn-outline.btn-tertiary.hover {
 
 /* About section */
 html .btn-primary:hover, html .btn-primary.hover {
-    /* border-color: #d9a62e #d9a62e #B38821; */
+    /* border-color: #d9a62e #d9a62e #571D31; */
     border-color: #4f6db3
 }
 
 .about-social-link:hover i {
-    color: #B38821;
+    color: #571D31;
 }
 
 .about-section:hover h3 {
@@ -74,7 +74,7 @@ html .btn-primary:hover, html .btn-primary.hover {
 } */
 /* sort below */
 .form-control input::placeholder {
-    color: #101324;
+    color: #E9CBD3;
   }
 
 .nav-tabs .nav-item:hover p {
@@ -105,3 +105,8 @@ html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(5) {
 html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(6) {
 	background-color: #ddb044; */
 }
+
+
+/* @media screen {
+    
+} */
