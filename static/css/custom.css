@@ -103,10 +103,23 @@ html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(5) {
 }
 
 html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(6) {
-	background-color: #ddb044; */
-}
+	background-color: #ddb044; 
+} */
 
 
 /* @media screen {
     
 } */
+
+/* Testimonial section */
+
+.testimonial.testimonial-with-quotes blockquote p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.owl-dots{
+    padding-top: 10px;
+}
