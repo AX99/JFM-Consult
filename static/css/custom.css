@@ -11,6 +11,10 @@
 
 }
 
+/* #footer {
+    border-top: 0;
+} */
+
 /* Loading splash screen */
 .logo-load {
     margin: -120px 0 0 -35px;
@@ -107,9 +111,12 @@ html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(6) {
 } */
 
 
-/* @media screen {
-    
-} */
+
+@media (max-width: 991px) {
+    #header .header-nav-main nav {
+        background-color: #4f6db3;
+    }
+}
 
 
 /* Homepage */
