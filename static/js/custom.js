@@ -29,3 +29,17 @@
 //         })
         
 // });
+
+
+// Testimonial modal
+
+var more_link = $('#testimonial-block').find('a')
+for (let i = 0; i < more_link.length; i++) {
+    more_link[i].addEventListener('click', function(){
+        var testimonial = this.parentElement.firstElementChild.innerText
+        var author = this.parentElement.lastElementChild.innerText
+        
+        document.getElementById('testimonialAuthor').innerText = author.substring(2)
+        document.getElementById('testimonial').innerText = testimonial
+})
+}

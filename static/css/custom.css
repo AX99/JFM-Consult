@@ -111,6 +111,15 @@ html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(6) {
     
 } */
 
+
+/* Homepage */
+#main > img {
+    display: block;
+    max-height: 200px;
+}
+
+
+
 /* Testimonial section */
 
 .testimonial.testimonial-with-quotes blockquote p {
@@ -122,4 +131,13 @@ html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(6) {
 
 .owl-dots{
     padding-top: 10px;
+}
+
+#testimonial-block > div > div a {
+    color: gold;
+}
+
+.slider-logo {
+	width: 190px !important;
+	height: auto !important;
 }
