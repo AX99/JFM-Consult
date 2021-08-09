@@ -1,20 +1,5 @@
 /* Add here all your CSS customizations */
 
-/* Footericons */
-.social-icons li:hover {
-    background: #571D31;
-	color: #FFF !important;
-}
-
-#footer a:not(.btn):hover {
-    color: #571D31;
-
-}
-
-/* #footer {
-    border-top: 0;
-} */
-
 /* Loading splash screen */
 .logo-load {
     margin: -120px 0 0 -35px;
@@ -33,6 +18,28 @@
 	border: 1px solid rgba(0, 0, 0, 0.327);
 }
 
+/* Navbar */
+#mainNav .active {
+    text-decoration: underline;
+}
+
+/* Footericons */
+.social-icons li:hover {
+    background: #571D31;
+	color: #FFF !important;
+}
+
+#footer a:not(.btn):hover {
+    color: #571D31;
+
+}
+
+
+/* Homepage */
+#main > img {
+    display: block;
+    max-height: 200px;
+}
 
 /* Homepage coaching section */
 .process .process-step-circle strong {
@@ -56,6 +63,12 @@ html .btn-outline.btn-tertiary:hover, html .btn-outline.btn-tertiary.hover {
 }
 
 /* About section */
+
+.parallax-background {
+    background-position-y: 128% !important;
+}
+
+
 html .btn-primary:hover, html .btn-primary.hover {
     /* border-color: #d9a62e #d9a62e #571D31; */
     border-color: #4f6db3
@@ -76,6 +89,8 @@ html .btn-primary:hover, html .btn-primary.hover {
 /* .form-control {
     background-color: #bfbfbf;
 } */
+
+
 /* sort below */
 .form-control input::placeholder {
     color: #E9CBD3;
@@ -85,55 +100,26 @@ html .btn-primary:hover, html .btn-primary.hover {
     color: #4f6db3
 }
 
-/* Coaching page section  - change commented out styles to correct colours */
-html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(1) {
-	background-color: #1d3366;
+/* Coaching page section  */
+
+/* Coaching */
+#coaching-body {
+    background:url("/static/img/about/banner.png");
+    background-size:cover; 
+    min-height:100vh; 
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
 }
-
-html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(2) {
-	background-color: #334c87;
-}
-
-html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(3) {
-	background-color: #4F6DB3;
-}
-
-/* html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(4) {
-	background-color: #c99825;
-}
-
-html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(5) {
-	background-color: #d9a62e;
-}
-
-html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(6) {
-	background-color: #ddb044; 
-} */
-
-
-
-@media (max-width: 991px) {
-    #header .header-nav-main nav {
-        background-color: #4f6db3;
-    }
-}
-
-
-/* Homepage */
-#main > img {
-    display: block;
-    max-height: 200px;
-}
-
 
 
 /* Testimonial section */
 
 .testimonial.testimonial-with-quotes blockquote p {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: 3 !important;
+    overflow: hidden !important;
 }
 
 .owl-dots{
@@ -147,4 +133,25 @@ html .featured-boxes-full-scale > .featured-box-full-tertiary:nth-child(6) {
 .slider-logo {
 	width: 190px !important;
 	height: auto !important;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+
+@media (max-width: 991px) {
+    #header .header-nav-main nav {
+        background-color: #4f6db3;
+    }
+
+    #coaching-body {
+    background:url("/static/img/about/banner2.png");
+    background-size:contain; 
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+
+    }
 }

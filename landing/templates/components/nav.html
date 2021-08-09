@@ -23,31 +23,33 @@
               <div class="header-nav-main header-nav-main-square header-nav-main-effect-2 header-nav-main-sub-effect-1">
                 <nav class="collapse">
                   <ul class="nav nav-pills" id="mainNav">
+                    {% with url_name=request.resolver_match.url_name %}
                     <li>
-                      <a class="active" href="/">
+                      <a class="{% if url_name == 'index' %}active{% endif %}" href="/">
                         Home
                       </a>
                     </li>
                     <li>
-                      <a href="/about/">
+                      <a class="{% if url_name == 'about' %}active{% endif %}" href="/about/">
                         About
                       </a>
                     </li>
                     <li>
-                      <a href="/coaching/">
+                      <a class="{% if url_name == 'coaching' %}active{% endif %}" href="/coaching/">
                         Coaching
                       </a>
                     </li>
                     <li>
-                      <a href="/blog/">
+                      <a class="{% if url_name == 'blog' %}active{% endif %}" href="/blog/">
                         Blog
                       </a>
                     </li>
                     <li>
-                      <a href="/contact/">
+                      <a class="{% if url_name == 'contact' %}active{% endif %}" href="/contact/">
                         Contact
                       </a>
                     </li>
+                    {% endwith %}
                   </ul>
                 </nav>
               </div>
