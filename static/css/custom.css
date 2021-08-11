@@ -104,7 +104,7 @@ html .btn-primary:hover, html .btn-primary.hover {
 
 /* Coaching */
 #coaching-body {
-    background:url("/static/img/about/banner.png");
+    background:url("/static/img/about/banner1.jpg");
     background-size:cover; 
     min-height:100vh; 
     background-position-x: right;
@@ -147,7 +147,7 @@ html .btn-primary:hover, html .btn-primary.hover {
     }
 
     #coaching-body {
-    background:url("/static/img/about/banner2.png");
+    background:url("/static/img/about/banner2.jpg");
     background-size:contain; 
     background-repeat: no-repeat;
     background-position-x: right;

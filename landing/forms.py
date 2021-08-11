@@ -26,3 +26,8 @@ class ContactForm(forms.Form):
     phone = forms.CharField(validators=[validate_phone_number])
     message = forms.CharField(max_length='5000', widget=forms.Textarea)
     trizzap = forms.CharField(required=False, widget=forms.HiddenInput, label='leave empty', validators=[should_be_empty])
+
+
+class Newsletter(forms.Form):
+    email = forms.EmailField(label='Email Address', validators=[validate_email])
+    trappa = forms.CharField(required=False, widget=forms.HiddenInput, label='leave empty', validators=[should_be_empty])
