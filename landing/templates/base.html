@@ -67,7 +67,11 @@
 			{% include 'components/nav.html' %}
 
 			<div role="main" class="main bg-color-secondary">
+				{% if request.get_full_path == '/' %}
 				<div class="h-100">
+				{% else %}
+				<div class="h-100 bg-color-white">
+				{% endif %}
 					
 					{% block content %}
 					{% endblock %}

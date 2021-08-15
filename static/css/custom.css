@@ -21,33 +21,38 @@
 /* Navbar */
 #mainNav .active {
     text-decoration: underline;
+    color: #b39d21 !important;
+}
+
+.header-nav-main nav > ul > li > a  {
+    color:#b39d21 !important;
 }
 
 /* Footericons */
 .social-icons li:hover {
-    background: #571D31;
+    background: #b39d21;
 	color: #FFF !important;
 }
 
 #footer a:not(.btn):hover {
-    color: #571D31;
+    color: #b39d21;
 
 }
 
 
-/* Homepage */
-#main > img {
+/* Homepage - changed #main from this to another element so check if uncommenting the below*/
+/* #main > img {
     display: block;
     max-height: 200px;
-}
+} */
 
 /* Homepage coaching section */
 .process .process-step-circle strong {
-	color: #4f6db3;
+	color: #E3D9CB;
 }
 
 .process-step:hover h4{
-    color: #4f6db3
+    color: #E3D9CB
 }
 
 .process-step:hover p {
@@ -55,8 +60,9 @@
 }
 
 .testimonial.testimonial-style-7 blockquote:before {
-    color: #4f6db3;
+    color: #E3D9CB;
 }
+
 
 html .btn-outline.btn-tertiary:hover, html .btn-outline.btn-tertiary.hover {
     color: #b39d21;
@@ -71,7 +77,7 @@ html .btn-outline.btn-tertiary:hover, html .btn-outline.btn-tertiary.hover {
 
 html .btn-primary:hover, html .btn-primary.hover {
     /* border-color: #d9a62e #d9a62e #571D31; */
-    border-color: #4f6db3
+    border-color: #E3D9CB
 }
 
 .about-social-link:hover i {
@@ -79,7 +85,7 @@ html .btn-primary:hover, html .btn-primary.hover {
 }
 
 .about-section:hover h3 {
-    color: #4f6db3;
+    color: #E3D9CB;
 }
 
 .about-section:hover p {
@@ -93,11 +99,11 @@ html .btn-primary:hover, html .btn-primary.hover {
 
 /* sort below */
 .form-control input::placeholder {
-    color: #E9CBD3;
+    color: #101324;
   }
 
 .nav-tabs .nav-item:hover p {
-    color: #4f6db3
+    color: #E3D9CB
 }
 
 /* Coaching page section  */
@@ -125,13 +131,18 @@ html .btn-primary:hover, html .btn-primary.hover {
 .owl-dots{
     padding-top: 10px;
 }
+.owl-next, .owl-prev {
+    color: #b39d21 !important;
+    background-color: #101324 !important;
+}
 
 #testimonial-block > div > div a {
-    color: gold;
+    color: #b39d21;
+    cursor: pointer;
 }
 
 .slider-logo {
-	width: 190px !important;
+	width: 200px !important;
 	height: auto !important;
 }
 
@@ -143,7 +154,7 @@ html .btn-primary:hover, html .btn-primary.hover {
 
 @media (max-width: 991px) {
     #header .header-nav-main nav {
-        background-color: #4f6db3;
+        background-color: #E3D9CB;
     }
 
     #coaching-body {
