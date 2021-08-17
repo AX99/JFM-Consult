@@ -10,7 +10,7 @@
             <h2 class="text-primary font-weight-normal text-7 mt-2 mb-0 appear-animation animated maskUp appear-animation-visible underline" data-appear-animation="maskUp" data-appear-animation-delay="200" style="animation-delay: 200ms;"><strong class="font-weight-extra-bold ">Contact</strong> Us</h2>
         </div>
         <div class="overflow-hidden mb-4 pb-3">
-            <p class="text-secondary mb-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="400" style="animation-delay: 400ms;">Feel free to ask for details, don't save any questions!</p>
+            <p class="text-quaternary text-uppercase font-weight-bold mb-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="400" style="animation-delay: 400ms;">Feel free to ask for details, don't save any questions!</p>
         </div>
     </div>
     <hr>
@@ -18,66 +18,18 @@
         <div class="row py-4">
             <div class="col-lg-6">
                 <h4 class="text-primary">Get in <strong>Touch</strong></h4>
-                <p class="text-secondary font-weight-semibold lead mb-0 text-4">If you are interested in learning more and taking on some coaching please get in touch with me to book a free initial chemistry session. Or if you have any questions, fill out the form with your details and I'll get back to you to schedule a meeting.</p>
+                <p class="text-secondary mb-0 text-4 lead">If you are interested in learning more and taking on some coaching please get in touch with me to book a free initial chemistry session. Or if you have any questions, fill out the form with your details and I'll get back to you to schedule a meeting.</p>
 
                 <div class="appear-animation animated fadeIn appear-animation-visible pt-5" data-appear-animation="fadeIn" data-appear-animation-delay="800" style="animation-delay: 800ms;">
                     <h4 class="text-primary mt-2 mb-1">Other <strong>Contacts</strong></h4>
                     <ul class="list list-icons list-icons-style-2 mt-2">
                         <li><i class="fab fa-linkedin-in"></i> <strong class="text-quaternary">LinkedIn:</strong> <a href="https://www.linkedin.com/in/jessica-ocquaye-mcipd-13b03384/" target="_blank">Jessica Ocquaye MCIPD</a></li>
                         <li><i class="fab fa-tiktok top-6"></i> <strong class="text-quaternary">TikTok: </strong><a href="https://www.tiktok.com/@jessfmcoach" target='_blank'>@JessFMCoach</a></li>
-                        <li><i class="fas fa-envelope top-6"></i> <strong class="text-quaternary">Email:</strong> <a href="mailto:info@jfmconsult.com" target="mailto">info@jfmconsult.com</a></li>
+                        <li><i class="fas fa-envelope top-6"></i> <strong class="text-quaternary">Email:</strong> <a href="mailto:info@jfmconsult.co.uk" target="mailto">info@jfmconsult.co.uk</a></li>
                     </ul>
                 </div>
                 
             </div>
-            <!-- <div class="col-lg-6">
-                <form id="contactForm" class="contact-form" action="php/contact-form.php" method="POST" novalidate="novalidate">
-                    <div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
-                        <strong>Success!</strong> Your message has been sent to us.
-                    </div>
-                
-                    <div class="contact-form-error alert alert-danger d-none mt-4" id="contactError">
-                        <strong>Error!</strong> There was an error sending your message.
-                        <span class="mail-error-message text-1 d-block" id="mailErrorMessage"></span>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group col">
-                            <label class="required font-weight-bold text-tertiary text-2">First Name</label>
-                            <input type="text" value="" data-msg-required="Please enter your first name." maxlength="100" class="bg-color-grey-scale-10 form-control" name="name" id="first_name" required="">
-                        </div>
-                        <div class="form-group col">
-                            <label class="required font-weight-bold text-tertiary text-2">Last Name</label>
-                            <input type="text" value="" data-msg-required="Please enter your last name." maxlength="100" class="bg-color-grey-scale-10 form-control" name="name" id="last_name" required="">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-lg-6">
-                            <label class="required font-weight-bold text-tertiary text-2">Email Address</label>
-                            <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="bg-color-grey-scale-10 form-control" name="email" id="email" required="">
-                        </div>
-                        <div class="form-group col-lg-6">
-                            <label class="font-weight-bold text-tertiary text-2">Phone Number</label>
-                            <input type="text" value="" data-msg-required="Please enter your phone number." maxlength="14" class="bg-color-grey-scale-10 form-control" name="phone" id="phone" required="">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col">
-                            <label class="required font-weight-bold text-tertiary text-2">Message</label>
-                            <textarea maxlength="5000" data-msg-required="Please enter your message." rows="5" class="bg-color-grey-scale-10 form-control" name="message" id="message" required=""></textarea>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col">
-                            <input type="submit" value="Send Message" class="btn btn-primary btn-modern" data-loading-text="Loading...">
-                        </div>
-                    </div>
-                </form>
-
-            </div> -->
-
-
-
             <div class="col-lg-6">
                 <form id="contactForm" class="contact-form" action="{% url 'contact' %}" method="POST" novalidate=novalidate>
                     {% csrf_token %}
@@ -122,8 +74,8 @@
                         {% endfor %}
                     </div>
                     <div class="form-row">
-                        {% for field in form.visible_fields|slice:"2:4" %}
-                        <div class="form-group col-lg-6">
+                        {% for field in form.visible_fields|slice:"2:3" %}
+                        <div class="form-group col-lg-12">
                             <label class="required font-weight-bold text-primary text-2">{{ field.label }}</label>
                             {{field.errors}}
                             <input type="{{ field.name }}" data-msg-required="Please enter your {{field.label}}." data-msg-email="Please enter a valid {{field.label}}." class="bg-color-grey-scale-10 form-control" name="{{ field.name }}" id="{{ field.name }}">
@@ -132,7 +84,7 @@
                         {% endfor %}
                     </div>
                     <div class="form-row">
-                        {% for field in form.visible_fields|slice:"4:" %}
+                        {% for field in form.visible_fields|slice:"3:" %}
                         <div class="form-group col">
                             <label class="required font-weight-bold text-primary text-2">{{ field.label }}</label>
                             {{field.errors}}
@@ -143,7 +95,7 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col">
-                            <button type="submit" class="btn btn-primary btn-modern" data-loading-text="Loading...">Send Message</button>
+                            <button type="submit" class="btn btn-modern bg-quaternary border-color-quaternary btn-outline text-secondary bg-hover-primary text-hover-tertiary" data-loading-text="Loading...">Send Message</button>
                         </div>
                     </div>
                 </form>

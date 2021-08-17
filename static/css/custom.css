@@ -24,10 +24,6 @@
     color: #b39d21 !important;
 }
 
-.header-nav-main nav > ul > li > a  {
-    color:#b39d21 !important;
-}
-
 /* Footericons */
 .social-icons li:hover {
     background: #b39d21;
@@ -47,16 +43,9 @@
 } */
 
 /* Homepage coaching section */
-.process .process-step-circle strong {
-	color: #E3D9CB;
-}
-
-.process-step:hover h4{
-    color: #E3D9CB
-}
 
 .process-step:hover p {
-    color: #b39d21;
+    color: #E3D9CB;
 }
 
 .testimonial.testimonial-style-7 blockquote:before {
@@ -81,15 +70,7 @@ html .btn-primary:hover, html .btn-primary.hover {
 }
 
 .about-social-link:hover i {
-    color: #571D31;
-}
-
-.about-section:hover h3 {
     color: #E3D9CB;
-}
-
-.about-section:hover p {
-    color: #b39d21;
 }
 
 /* .form-control {
@@ -100,24 +81,26 @@ html .btn-primary:hover, html .btn-primary.hover {
 /* sort below */
 .form-control input::placeholder {
     color: #101324;
-  }
-
-.nav-tabs .nav-item:hover p {
-    color: #101324;
 }
+
+
 
 /* Coaching page section  */
 
 /* Coaching */
 #coaching-body {
     background:url("/static/img/about/banner1.jpg");
-    background-size:cover; 
+    background-size:100% auto; 
     min-height:100vh; 
     background-position-x: right;
     background-repeat: no-repeat;
     background-position-y: bottom;
 }
 
+/* info section */
+.nav-tabs .nav-item:hover p {
+    color: #101324;
+}
 
 /* Testimonial section */
 
