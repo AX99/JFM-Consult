@@ -24,18 +24,6 @@
     color: #b39d21 !important;
 }
 
-/* Footericons */
-.social-icons li:hover {
-    background: #b39d21;
-	color: #FFF !important;
-}
-
-#footer a:not(.btn):hover {
-    color: #b39d21;
-
-}
-
-
 /* Homepage - changed #main from this to another element so check if uncommenting the below*/
 /* #main > img {
     display: block;
@@ -58,11 +46,6 @@ html .btn-outline.btn-tertiary:hover, html .btn-outline.btn-tertiary.hover {
 }
 
 /* About section */
-
-.parallax-background {
-    background-position-y: 128% !important;
-}
-
 
 html .btn-primary:hover, html .btn-primary.hover {
     /* border-color: #d9a62e #d9a62e #571D31; */
