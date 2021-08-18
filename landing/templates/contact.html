@@ -31,7 +31,7 @@
                 
             </div>
             <div class="col-lg-6">
-                <form id="contactForm" class="contact-form" action="{% url 'contact' %}" method="POST" novalidate=novalidate>
+                <form id="contactForm" class="contact-form" action="{% url 'contact' %}" method="POST">
                     {% csrf_token %}
 
                     {% for hidden in form.hidden_fields %}
