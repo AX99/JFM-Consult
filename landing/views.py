@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import FormView, TemplateView
@@ -17,8 +17,44 @@ class  CoachingView(TemplateView):
     template_name = 'coaching.html'
     
 
-class BlogView(TemplateView):
-    template_name = 'blog.html'
+# class BlogView(TemplateView):
+#     template_name = 'blog.html'
+
+# Latest comment below
+# def contact(request):
+#     form = ContactForm()
+    
+#     # if request.method == 'POST':
+#     if request.is_ajax():
+#         form = ContactForm(request.POST)
+
+#         # first_name = request.POST['first_name']
+#         # last_name = request.POST['last_name']
+#         # email = request.POST['email']
+#         # phone = request.POST['phone']
+#         # message = request.POST['message']
+
+#         if form.is_valid():
+#             print("Post form is valid")
+#             success = messages.success(request, 'Form submission successful') 
+#             context = {'form': form, 'success': 'success'}
+#             # return HttpResponse(success)
+#             # return render(request, 'contact.html', context)
+#             return JsonResponse({
+#                 'msg': 'Success'
+#             })
+#         else:
+#             print('Post form is INVALID')
+#             success = messages.error(request, 'Form submission unsuccesful, try again')
+#             context = {'form': form, 'success':success}
+#             # return HttpResponse(success)
+#             # return render(request, 'contact.html', context)
+#             return JsonResponse({
+#                 'msg': 'Error'
+#             })
+#     else:
+#         context = {'form': form}
+#         return render(request, 'contact.html', context)
 
 
 # class ContactFormView(SuccessMessageMixin, FormView):
