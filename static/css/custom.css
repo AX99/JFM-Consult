@@ -47,6 +47,10 @@ html .btn-outline.btn-tertiary:hover, html .btn-outline.btn-tertiary.hover {
 
 /* About section */
 
+.parallax-background {
+    background-position-y: 128% !important;
+}
+
 html .btn-primary:hover, html .btn-primary.hover {
     /* border-color: #d9a62e #d9a62e #571D31; */
     border-color: #E3D9CB
@@ -87,6 +91,10 @@ html .btn-primary:hover, html .btn-primary.hover {
 
 /* Testimonial section */
 
+.testimonial.testimonial-with-quotes.testimonial-quotes-dark blockquote:before, .testimonial.testimonial-with-quotes.testimonial-quotes-dark blockquote:after{
+    color: #b39d21  !important;
+}
+
 .testimonial.testimonial-with-quotes blockquote p {
     display: -webkit-box !important;
     -webkit-box-orient: vertical !important;
@@ -98,9 +106,16 @@ html .btn-primary:hover, html .btn-primary.hover {
     padding-top: 10px;
 }
 .owl-next, .owl-prev {
-    color: #b39d21 !important;
-    background-color: #101324 !important;
+    color: #101324 !important;
+    background-color: #b39d21 !important;
 }
+
+.owl-next:hover, .owl-prev:hover {
+    color: #E3D9CB !important;
+    background-color: #571d31 !important;
+    border: 1px solid #b39d21;
+}
+
 
 #testimonial-block > div > div a {
     color: #b39d21;
