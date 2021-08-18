@@ -4903,11 +4903,9 @@ window.theme.fn = {
 										.closest('.control-group')
 										.removeClass('success')
 										.addClass('error');
-
 								}
 							}
 						});
-
 					},
 					rules: {
 						newsletterEmail: {

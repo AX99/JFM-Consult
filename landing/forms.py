@@ -29,5 +29,6 @@ class ContactForm(forms.Form):
 
 
 class Newsletter(forms.Form):
-    email = forms.EmailField(label='Email Address', validators=[validate_email])
     trappa = forms.CharField(required=False, widget=forms.HiddenInput, label='leave empty', validators=[should_be_empty])
+    mailaccount_r = forms.EmailField(label='Enter Your Email Address:', validators=[validate_email], required=True, min_length=12, max_length=51, )
+    mailaccount2_r = forms.EmailField(label='Please confirm Your Email Address: ', validators=[validate_email], required=True, min_length=12, max_length=51)

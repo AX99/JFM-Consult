@@ -23,20 +23,17 @@
             </div> -->
             <div class="col-lg-5">
                 <h5 class="text-6 text-transform-none font-weight-semibold text-quaternary mb-4">Newsletter</h5>
-                <p class="text-4 mb-1">Get all the latest informationon Sales and Offers.</p>
+                <p class="text-4 mb-1">Get all the latest information</p>
                 <p class="text-4">Sign up for our newsletter today.</p>
+
+
                 <div class="alert alert-success d-none" id="newsletterSuccess">
                     <strong>Success!</strong> You've been added to our email list.
                 </div>
-                <div class="alert alert-danger d-none" id="newsletterError"></div>
-                <form id="newsletterForm" action="#" method="POST" class="mw-100">
-                    <div class="input-group input-group-rounded">
-                        <input class="form-control form-control-sm px-4 text-3" placeholder="Email Address..." name="newsletterEmail" id="newsletterEmail" type="text">
-                        <span class="input-group-append">
-                            <button class="btn btn-primary text-color-light text-2 py-3 px-4" type="submit"><strong>SUBSCRIBE!</strong></button>
-                        </span>
-                    </div>
-                </form>
+
+                <div class="input-group input-group-rounded">
+                    <button class="btn btn-primary text-color-light text-2 py-3 px-4" id="myBtn" data-toggle="modal" data-target="#newsletterModal"><strong>SUBSCRIBE!</strong></button>
+                </div>
             </div>
         </div>
     </div>
@@ -62,3 +59,62 @@
         </div>
     </div>
 </footer>
+
+<div class="modal fade show my-5 py-5" id="newsletterModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" style="display: hidden;" aria-modal="true">
+	<div class="modal-dialog bg-secondary">
+		<div class="modal-content bg-tertiary">
+			<div class="modal-header">
+				<h4 class="modal-title mx-auto text-center text-uppercase text-primary font-weight-bold" id="newsletterLabel">Sign up to the JFM Consult Newsletter</h4>
+				<button type="button" class="close p-3 m-n3" data-dismiss="modal" aria-hidden="true">×</button>
+			</div>
+			<div class="modal-body text-center">
+				<form id="demo-form" class="mb-4" novalidate="novalidate" action="https://ml.kundenserver.de/cgi-bin/mailinglist.cgi" method="POST" target="_blank">
+                    {% csrf_token %}
+
+                    {% for hidden in newsletter.hidden_fields %}
+                    {{ hidden }}
+                    {% endfor %}
+
+                    {% for field in newsletter.visible_fields %}
+					<div class="align-items-center">
+						<label class="font-weight-bold mb-0">{{ field.label }}</label>
+					</div>
+
+					<div class="form-group row align-items-center">
+						<div class="col-sm-10 offset-1">
+							<br />
+							<input maxlength="51" name="{{ field.name}}" class="form-control size="51" type="text">
+							<br />
+						</div>
+					</div>
+                    {% endfor %}
+                    <div class="form-group row align-items-center" style="display: none">
+						<div class="col-sm-9">
+							<input checked name="subscribe_r" class="form-control" type="radio" value="subscribe">
+							Subscribe me to newsletter@jfmconsult.co.uk.
+							<br />
+							<input name="subscribe_r" class="form-control" type="radio" value="unsubscribe">
+							Unsubscribe me from newsletter@jfmconsult.co.uk.
+						</div>
+                        <input name="FBMLNAME" type="hidden" value="newsletter@jfmconsult.co.uk">
+                        <br />
+                        <input name="FBLANG" type="hidden" value="en">
+                        <br />
+                        <input name="FBURLERROR_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/error.en.html">
+                        <br />
+                        <input name="FBURLSUBSCRIBE_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/subscribe.en.html">
+                        <br />
+                        <input name="FBURLUNSUBSCRIBE_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/unsubscribe.en.html">
+                        <br />
+                        <input name="FBURLINVALID_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/invalid.en.html">
+                    </div>
+			<div class="modal-footer">
+				<input type="SUBMIT" class="btn btn-modern bg-quaternary border-color-quaternary btn-outline text-secondary bg-hover-primary text-hover-tertiary mx-auto" value="Send">
+				<br />
+				<input type="RESET" class="btn btn-modern bg-quaternary border-color-quaternary btn-outline text-secondary bg-hover-primary text-hover-tertiary mx-auto" value="Reset">
+			</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
