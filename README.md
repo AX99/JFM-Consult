@@ -1,7 +1,7 @@
 # JFM Consult Website
 
 ## Client's Life and Career coaching website 
-# Built using:
+### Built using:
 
 - Python - Django
 - JQuery
