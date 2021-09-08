@@ -54,6 +54,9 @@
 		<script src=" {% static "vendor/modernizr/modernizr.min.js" %}"></script>
 
 	</head>
+	{% if request.get_full_path == '/' %}
+	<body class="bg-color-secondary">
+	{% else %}
 	<body class="loading-overlay-showing bg-color-secondary" data-plugin-page-transition data-loading-overlay data-plugin-options="{'hideDelay': 500}">
 		<div class="loading-overlay bg-secondary">
 			<div class="logo-load"><img src="{% static "img/logo-icon.png"%}" width=80></div>
@@ -63,7 +66,7 @@
 				<div class="bounce3"></div>
 			</div>
 		</div>
-
+	{% endif %}
 		<div class="body bg-color-secondary">
 			{% include 'components/nav.html' %}
 

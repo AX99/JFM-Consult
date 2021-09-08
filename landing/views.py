@@ -41,8 +41,8 @@ def contact(request):
                 msg.send(fail_silently=True)
             except BadHeaderError:
                 return HttpResponse("Invalid Header Found")
-            success = messages.success(request, 'Form submission successful')
-            return HttpResponseRedirect(contact, success)
+            success = messages.success(request, 'Form sent! You should receive an email confirmation shortly - (Check your spam)')
+            return HttpResponseRedirect('/contact/', success)
         else:
             print('Post form is INVALID')
             success = messages.error(request, 'Form submission unsuccesful, try again')
