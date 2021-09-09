@@ -39,6 +39,7 @@ def contact(request):
             try:
                 msg = EmailMessage(subject, message, sender, recipient, headers=headers)
                 msg.send(fail_silently=True)
+                print("Form sent")
             except BadHeaderError:
                 return HttpResponse("Invalid Header Found")
             success = messages.success(request, 'Form sent! You should receive an email confirmation shortly - (Check your spam)')
